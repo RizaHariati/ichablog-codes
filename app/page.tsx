@@ -1,11 +1,40 @@
-import Image from "next/image";
+import React, { useEffect } from "react";
+import { useGlobalContext } from "./context/AppProvider";
+import { getProjects } from "@/sanity/sanity-utils";
+import { Project } from "@/types/projects";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono">
-        <h1>Madame</h1>
-      </div>
-    </main>
-  );
-}
+import Content from "./Content";
+type Props = {};
+
+const Home = async (props: Props) => {
+  const projects: Project[] = await getProjects();
+
+  return <Content projects={projects} />;
+};
+
+export default Home;
+
+// export const productReducer = (state, action) => {
+//   switch (action.type) {
+//     case "CREATE_PRODUCT":
+//       return [
+//         ...state,
+//         {
+//           id: action.payload.id,
+//           name: action.payload.name,
+//           price: action.payload.price,
+//         },
+//       ];
+//     case "DELETE_PRODUCT":
+//       return [...state.filter((product) => product.id !== action.payload.id)];
+//     default:
+//       return state;
+//   }
+// };
+
+// export const shoppingCartReducer = (state, action) => {
+//   switch (action.type) {
+//     case "ADD_PRODUCT":
+//       return state + 1;
+//   }
+// };
