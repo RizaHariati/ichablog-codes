@@ -1,6 +1,6 @@
-import { ContentState } from "../context/interfaces";
+import { IContentState } from "../context/interfaces";
 
-export const initialContent: ContentState = {
+export const initialContent: IContentState = {
   country: "UK",
   city: "London",
 };

@@ -1,12 +1,15 @@
-export interface AppState {
-  user: UserState;
-  content: ContentState;
+import { PersonListProps } from "@/types/projectsTypes";
+
+export interface IAppState {
+  user: IUserState;
+  content: IContentState;
 }
-export interface UserState {
+export interface IUserState {
   name: string;
+  fullName: PersonListProps;
 }
 
-export interface ContentState {
+export interface IContentState {
   country: string;
   city: string;
 }

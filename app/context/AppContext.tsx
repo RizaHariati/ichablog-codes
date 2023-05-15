@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import { AppState } from "./interfaces";
+import { IAppState } from "./interfaces";
 
 export type AppContextProps = {
-  state: AppState;
+  state: IAppState;
   dispatch: ({ type }: { type: string; payload?: any }) => void;
 };
 

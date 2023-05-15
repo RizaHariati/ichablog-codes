@@ -1,15 +1,15 @@
 "use client";
 
-import { AppState, ContentState } from "../context/interfaces";
+import { IContentState } from "../context/interfaces";
 
-interface OpenModalAction {
+interface IOpenModalAction {
   type: string;
   payload?: any;
 }
 
 export const contentReducer = (
-  state: ContentState,
-  action: OpenModalAction
+  state: IContentState,
+  action: IOpenModalAction
 ) => {
   switch (action.type) {
     case "ACTION_B":

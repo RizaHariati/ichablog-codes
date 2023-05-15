@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useGlobalContext } from "./context/AppProvider";
 import { getProjects } from "@/sanity/sanity-utils";
-import { Project } from "@/types/projects";
 
 import Content from "./Content";
+import { Project } from "../types/projectsTypes";
 type Props = {};
 
 const Home = async (props: Props) => {

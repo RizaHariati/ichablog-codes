@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { useGlobalContext } from "./context/AppProvider";
-import { Project } from "../types/projects";
+import { Project } from "../types/projectsTypes";
 
 type ContentProps = {
   projects: Project[];

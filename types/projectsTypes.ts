@@ -20,12 +20,4 @@ type Location = {
   city: string;
 };
 
-type ProfileState = {
-  identity: Identity;
-  location: Location;
-};
-
-type Action = {
-  type: string;
-  payload: any;
-};
+export type FullNameType = { first: string; last: string };
