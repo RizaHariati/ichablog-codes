@@ -1,7 +1,5 @@
-"use client";
+import { IAppState } from "../context/interfaces";
 
-import { AppState } from "../context/interfaces";
-import { Reducer } from "react";
 import { userReducer } from "./userReducer";
 import { initialUser } from "./initialUser";
 import { initialContent } from "./initialContent";
@@ -12,15 +10,15 @@ interface OpenModalAction {
   type: string;
   payload?: any;
 }
-export const InitialStateAll: AppState = {
+export const InitialStateAll: IAppState = {
   user: initialUser,
   content: initialContent,
 };
 
 type AppReducer = (
-  InitialStateAll: AppState,
+  InitialStateAll: IAppState,
   action: OpenModalAction
-) => AppState;
+) => IAppState;
 
 export const [appReducer, initialState] = combineReducers<AppReducer>({
   user: [userReducer, initialUser],

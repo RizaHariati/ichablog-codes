@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply w-full h-screen bg-accentActive;
+  }
+}
+
+@layer components {
+  .main-button {
+    min-height: 30px;
+    min-width: 100px;
+    max-width: 200px;
+    @apply bg-fillLit rounded-md grid grid-cols-6 justify-center place-items-center shadow-inner transition-all hover:bg-fillLit active:bg-white font-opensans uppercase text-base w-full !important;
+  }
+}

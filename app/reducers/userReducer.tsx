@@ -1,5 +1,3 @@
-"use client";
-
 import { IUserState } from "../context/interfaces";
 
 interface OpenModalAction {

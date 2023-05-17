@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <StrictMode>
         <AppProvider>
-          <body>{children}</body>
+          <body className="bg-blue-500">{children}</body>
         </AppProvider>
       </StrictMode>
     </html>

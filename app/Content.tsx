@@ -18,6 +18,11 @@ const Content = ({ projects }: ContentProps) => {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono">
         <h1>Madame</h1>
+        <Link href="/about">
+          <div className="bg-pink-200 rounded hover:bg-purple-200 cursor-pointer transition-all p-2 text-black">
+            <h1>about</h1>
+          </div>
+        </Link>
         {projects.map((project: Project, index) => {
           const { name, slug, _id, _createdAt, image, alt } = project;
           return (

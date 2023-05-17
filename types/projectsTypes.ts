@@ -21,3 +21,22 @@ type Location = {
 };
 
 export type FullNameType = { first: string; last: string };
+
+type ListProps = {
+  items: string[] | number[];
+  onClick: (value: string | number) => void;
+};
+
+export type RandomNumberProps = {
+  value: number;
+  isPositive?: boolean;
+  isNegative?: boolean;
+  isZero?: boolean;
+};
+
+type Horizontal = "left" | "center" | "right";
+type Vertical = "top" | "center" | "bottom";
+
+export type ToastProps = {
+  position: `${Horizontal}-${Vertical}`;
+};

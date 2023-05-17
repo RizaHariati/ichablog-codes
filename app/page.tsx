@@ -1,15 +1,20 @@
-import React, { useEffect } from "react";
-import { useGlobalContext } from "./context/AppProvider";
+import React from "react";
 import { getProjects } from "@/sanity/sanity-utils";
-
+import "./style/globals.css";
 import Content from "./Content";
 import { Project } from "../types/projectsTypes";
+import Movies from "./Movies";
 type Props = {};
 
 const Home = async (props: Props) => {
   const projects: Project[] = await getProjects();
 
-  return <Content projects={projects} />;
+  return (
+    <div>
+      <Movies />
+      <Content projects={projects} />
+    </div>
+  );
 };
 
 export default Home;

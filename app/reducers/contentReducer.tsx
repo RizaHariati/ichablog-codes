@@ -1,5 +1,3 @@
-"use client";
-
 import { IContentState } from "../context/interfaces";
 
 interface IOpenModalAction {
